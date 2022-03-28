@@ -8,6 +8,8 @@
     $service = "localhost"; $user = "root"; $password = ""; $nameDatabase = "appcitas";
     $connectionBD = new mysqli($service, $user, $password, $nameDatabase);
 
+    echo "Hello Friend";
+
     //Buscar
     if (isset($_GET["search"])){
         $sqlApointment = mysqli_query($connectionBD,"SELECT * FROM citas WHERE id=".$_GET["search"]);
